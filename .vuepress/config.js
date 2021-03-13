@@ -1,7 +1,10 @@
 module.exports = {
-  "title": "bloe_console",
-  "description": "",
+  "title": "blog_console",
+  "description": "东风快递，使命必达",
   "dest": "public",
+  plugins: [
+    '@vuepress-reco/extract-code'
+  ],
   "head": [
     [
       "link",
@@ -42,14 +45,21 @@ module.exports = {
         ]
       }
     ],
-    "sidebar": {
-      "/docs/theme-reco/": [
-        "",
-        "theme",
-        "plugin",
-        "api"
-      ]
-    },
+    // "sidebar": {
+    //   "/docs/theme-reco/": [
+    //     "",
+    //     "theme",
+    //     "plugin",
+    //     "api"
+    //   ],
+    //   "/view/vue": [
+    //     {
+    //       title: 'Composition API',
+    //       collapsable: true, // 不可折叠
+    //       children: ['/view/Introduction','/view/Introduction']
+    //     }
+    //   ]
+    // },
     "type": "blog",
     "blogConfig": {
       "category": {
@@ -86,7 +96,10 @@ module.exports = {
      recordLink: 'https://beian.miit.gov.cn/#/Integrated/index',
     "startYear": "2020"
   },
-  // "markdown": {
-  //   "lineNumbers": true
-  // }
+  "plugins": {
+    "vuepress-plugin-auto-sidebar": {}
+  },
+  "markdown": {
+    "lineNumbers": true
+  }
 }
